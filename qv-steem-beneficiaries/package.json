@@ -1,0 +1,55 @@
+{
+  "name": "qv-steem-beneficiaries",
+  "version": "0.1.0",
+  "description": "Quasar Vue component for managing Steem beneficiaries",
+  "main": "dist/qv-steem-beneficiaries.common.js",
+  "unpkg": "dist/qv-steem-beneficiaries",
+  "poi": {
+    "entry": "dev/main.js",
+    "dist": "dev/dist",
+    "homepage": "/qv-steem-beneficiaries/"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo 'no tests!' && npm run lint",
+    "prepublish": "npm run build",
+    "lint": "xo",
+    "build": "bili",
+    "build:example": "poi build",
+    "dev": "poi --port 5000"
+  },
+  "author": "Olivier Deme",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-vue-app": "^2.0.0",
+    "bili": "^0.16.0-rc.2",
+    "eslint-config-rem": "^3.0.0",
+    "node-sass": "^4.5.3",
+    "poi": "^9.1.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-vue": "^2.4.2",
+    "sass-loader": "^6.0.6",
+    "vue": "^2.4.2",
+    "xo": "^0.18.0"
+  },
+  "xo": {
+    "extends": "rem/prettier",
+    "ignores": [
+      "dev/**"
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "vue-app",
+        {
+          "useBuiltIns": true
+        }
+      ]
+    ]
+  }
+}

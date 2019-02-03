@@ -1,0 +1,12 @@
+This workspace uses the following template to build the NPM package:
+https://github.com/cristijora/vue-npm-template
+
+$ cd my-project # Navigate into your new project folder
+
+$ npm install --save-dev babel-preset-vue-app
+$ npm install  # Install dependencies
+$ npm run dev  # Run development server on port 5000
+$ npm run build # Build your component for production
+
+To build a local package for testing before publishing:
+$ npm pack
