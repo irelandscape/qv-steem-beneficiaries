@@ -12,9 +12,9 @@
     <q-dialog
       v-model="beneficiariesDialog"
       @cancel='onCancel'
-      :title="$tc('beneficiaries')"
+      :title="translate('beneficiaries')"
       v-show=true
-      :ok="$tc('save')"
+      :ok="translate('save')"
       :cancel=true
       prevent-close
     >
@@ -40,7 +40,7 @@
             style="height: 3rem;"
             type="text"
             v-model="beneficiary.account"
-            :float-label="$tc('account')"
+            :float-label="translate('account')"
             @input="update($event, beneficiary)"
           />
           <q-knob
@@ -117,12 +117,19 @@ export default {
   },
   computed: {
     nbrOfBeneficiaries: function () {
-      return this.$tc('addbeneficiaries') + ' (' + this.validBeneficiaries + ')'
+      return this.translate('addbeneficiaries') + ' (' + this.validBeneficiaries + ')'
     }
   },
   mounted: function () {
   },
   methods: {
+    translate: function (str) {
+      if (this.$tc) {
+        return this.$tc(str)
+      } else {
+        return str
+      }
+    },
     displayWeight: function (weight) {
       return weight / 100
     },
