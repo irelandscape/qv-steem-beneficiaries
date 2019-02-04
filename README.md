@@ -19,7 +19,7 @@ The component stores the information in a json string suitable for insertion int
 ## Usage
 Install the component into your Node.js project:
 ``` bash
-npm install qv-steem-beneficiaries
+npm install --save qv-steem-beneficiaries
 ```
 In your component, import the *Beneficiaries* component as follows:
 ```javascript
